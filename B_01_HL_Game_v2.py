@@ -183,12 +183,10 @@ while rounds_played < num_rounds:
         if guess < secret and guesses_used < guesses_allowed:
             feedback = (f"Too low, please try a higher number "
                         f"You've used {guesses_used} / {guesses_allowed}")
-            print(feedback)
 
         elif guess > secret and guesses_used < guesses_allowed:
             feedback = ("Too high, please try a lower number"
                         f"You've used {guesses_used} / {guesses_allowed}")
-            print(feedback)
 
         elif guess == secret:
             history_feedback = f"Round {rounds_played}: You won in {guesses_used} guesses"
@@ -208,7 +206,7 @@ while rounds_played < num_rounds:
             guesses_used += 1
 
         if guesses_used == guesses_allowed - 1:
-            print("Careful, you only have 1 guess left.")
+            print("💣💣💣 Careful, you only have 1 guess left 💣💣💣")
 
         print(feedback)
 
